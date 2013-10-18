@@ -2,8 +2,6 @@ class Monologue::ApplicationController < ApplicationController
 
   layout Monologue.layout if Monologue.layout # TODO: find a way to test that. It was asked in issue #54 (https://github.com/jipiboily/monologue/issues/54)
 
-  before_filter :recent_posts, :all_tags
-
   def recent_posts
     @recent_posts = Monologue::Post.published.limit(3)
   end
@@ -33,7 +31,7 @@ class Monologue::ApplicationController < ApplicationController
     end
 
     def monologue_page_cache_enabled?
-      monologue_current_user.nil? && Monologue::PageCache.enabled
+      current_user.nil? && monologue_current_user.nil? #&& Monologue::PageCache.enabled
     end
 
   helper_method :monologue_current_user, :monologue_page_cache_enabled?

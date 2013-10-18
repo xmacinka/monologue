@@ -1,5 +1,7 @@
 class Monologue::PostsController < Monologue::ApplicationController
-  caches_page :index, :show, :feed , if: Proc.new { monologue_page_cache_enabled? }
+  caches_action :index, :show, :feed, :expires_in => 96.hours, if: Proc.new { monologue_page_cache_enabled? }
+
+  before_filter :recent_posts, :all_tags
 
   def index
     @page = params[:page].nil? ? 1 : params[:page]

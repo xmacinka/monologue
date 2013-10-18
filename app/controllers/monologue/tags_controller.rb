@@ -1,5 +1,8 @@
 class Monologue::TagsController < Monologue::ApplicationController
-  caches_page :show , if: Proc.new { monologue_page_cache_enabled? }
+  caches_action :show, :expires_in => 96.hours, if: Proc.new { monologue_page_cache_enabled? }
+
+  before_filter :recent_posts, :all_tags
+
   def show
     @tag = retrieve_tag
     if @tag
