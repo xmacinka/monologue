@@ -1,6 +1,6 @@
 class Monologue::Admin::PostsController < Monologue::Admin::BaseController
   respond_to :html
-  before_filter :load_post, only: [:edit, :update]
+  before_action :load_post, only: [:edit, :update]
   
   def index
     @page = params[:page].nil? ? 1 : params[:page]
