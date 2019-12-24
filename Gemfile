@@ -1,14 +1,9 @@
-source "http://rubygems.org"
+source "https://rubygems.org"
 
 # Declare your gem's dependencies in monologue.gemspec.
 # Bundler will treat runtime dependencies like base dependencies, and
 # development dependencies will be added by default to the :development group.
 gemspec
-
-# jquery-rails is used by the dummy application
-gem "jquery-rails"
-gem "sass-rails"
-gem "coffee-rails"
 
 # Declare any dependencies that are still in development here instead of in
 # your gemspec. These might include edge Rails or gems from your path or
@@ -21,7 +16,8 @@ gem "coffee-rails"
 
 group :development, :test do
   gem "thin"
-  gem 'rails', '3.2.8'
+  gem 'rails', '= 4.2.7'
+  gem 'responders', '~> 2.0'
   gem 'pry'
 
   if RUBY_PLATFORM.downcase.include?("darwin")
@@ -31,5 +27,5 @@ group :development, :test do
 end
 
 gem 'coveralls', require: false
-
 gem 'pg'
+gem 'turbolinks'

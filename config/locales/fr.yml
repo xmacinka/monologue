@@ -56,6 +56,7 @@ fr:
           published: "Oui"
           not_published: "Non publié"
           status: "Publié ?"
+          author: "Auteur"
         new:
           header: "Nouveau monologue"
         create:
@@ -81,18 +82,6 @@ fr:
           preview: "Aperçu"
           close: "Fermer"
           tags: "Catégories"
-      cache:
-        show:
-          title: "Gérer la cache"
-          description: "Vous pouvez complètement effacer la cache ici."
-          files_in_cache: "Voici les fichiers en cache:"
-          no_files_are_cached: "Il n'y a aucun fichier en cache."
-          delete: "Effacer complètement la cache?"
-          confirm: 'Voulez-vous vraiment effacer la cache?'
-          cache_wiped: "La cache a été effacée!"
-        how_to_enable:
-          warning: "Vous ne pouvez gérer la cache!"
-          explanations: "Il y a certaines configurations à effectuer pour utiliser la gestion de cache de base de Monologue. SVP voir la documentation ci-dessous (anglais seulement)."
       comments:
         show:
           recent_comments: "Commentaires récents"
@@ -129,14 +118,14 @@ fr:
     errors:
       models:
         full_messages: "%{message}"
-        monologue/posts_revision:
+        monologue/post:
           blank: "%{attribute} est requis"
+          taken: "%{attribute} est déjà utilisé par un autre article"
           attributes:
             published_at:
               blank: "'Publié le' est requis"
             url:
               start_with_slash: "L'adresse URL ne peut débuter par un slash ('/')"
-              unique: "L'adresse URL est déjà utilisée par un autre article"
         monologue/user:
           blank: "%{attribute} est requis"
           taken: "%{attribute} est déjà utilisé"

@@ -33,16 +33,16 @@ a.social {
   font-size: 30px;
 }
 
-.revision-header span {
+.post-header span {
     text-transform: uppercase;
     font-weight: bold;
 }
 
-.revision-header span:after{
+.post-header span:after{
     content: "|";
 }
 
-.revision-header span:last-child:after {
+.post-header span:last-child:after {
     content: "";
 }
 /* pagination */
@@ -198,4 +198,31 @@ a.social {
   display: inline;
   /*margin: 0 40px 0 40px;*/
   /*padding: 0 0 0 0;*/
+}
+
+/** archive css **/
+.archive ul {
+  text-align: left;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.archive ul li {
+  padding: 0;
+  margin: 0 0 0 10px;
+  cursor: pointer;
+}
+
+.archive ul.js-posts li {
+  margin-bottom: 10px;
+}
+
+.archive .blog-year:before, .archive .blog-month:before {
+  content: "+";
+  padding-right: 5px;
+}
+
+.archive .blog-year.active:before, .archive .blog-month.active:before {
+  content: "-";
 }

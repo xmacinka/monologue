@@ -58,6 +58,7 @@ ro:
           published: "Da"
           not_published: "Nu e publicat"
           status: "Publicat ?"
+          author: "Autor"
         new:
           header: "Articol nou"
         create:
@@ -86,18 +87,6 @@ ro:
       comments:
         show:
           recent_comments: "Comentarii recente"
-      cache:
-        show:
-          title: "Gestionare cache"
-          description: "Aici puteti sterge cache-ul."
-          files_in_cache: "Fisiere cache-uite:"
-          no_files_are_cached: "Nu exista nici un fisier in cache."
-          delete: "Stergeti cache-ul?"
-          confirm: 'Sigur doriti sa stergeti cache-ul?'
-          cache_wiped: "Cache-ul a fost sters!"
-        how_to_enable:
-          warning: "Nu puteti gestiona cache-ul!"
-          explanations: "Anumite setari sunt incorecte pentru a putea folosi cache-ul din Monologue. Va rugam sa citit documentatia."
       sessions:
         new:
           title: "Autentificare"
@@ -131,14 +120,14 @@ ro:
     errors:
       models:
         full_messages: "%{message}"
-        monologue/posts_revision:
+        monologue/post:
           blank: "%{attribute} este necesar"
+          taken: "%{attribute}-ul este deja folosit"
           attributes:
             published_at:
               blank: "'Published at' este necesar"
             url:
               start_with_slash: "URL-ul nu poate incepe cu slash ('/')"
-              unique: "URL-ul este deja folosit"
         monologue/user:
           blank: "%{attribute} este necesar"
           taken: "TODO %{attribute} has already been taken"

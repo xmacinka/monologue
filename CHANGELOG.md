@@ -1,9 +1,15 @@
 # Monologue: the changelog!
-(for upgrade informations, see UPGRADE.md)
+(for upgrade information, see UPGRADE.md)
+## 0.4.0
+ - Rails 4 only
+ - Change of syntax for configuration. Please use Monologue::Config instead of the old Monologue module
 
-## 0.3.0.beta
+## 0.3.0
  - move the user_id column from Monologue::PostRevision to Monologue::Post.
- - Portuguese translations were added, thanks to [jvortmann](https://github.com/jvortmann). You can now use Monologue in either French, English, Romanian or Portuguese!
+ - Portuguese, Italian and Spanish translations were added! You can now use Monologue in either French, English, Romanian, Portuguese, Italian and Spanish
+ - Remove revisions
+ - Preview using Ajax
+ - User management
  - bug fixes & cleanup
 
 ## 0.2.0

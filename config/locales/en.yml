@@ -58,6 +58,7 @@ en:
           published: "Yes"
           not_published: "Not published"
           status: "Published ?"
+          author: "Author"
         new:
           header: "New monologue"
         create:
@@ -86,18 +87,6 @@ en:
       comments:
         show:
           recent_comments: "Recent comments"
-      cache:
-        show:
-          title: "Manage cache"
-          description: "You can completely wipe cache here."
-          files_in_cache: "Here are the files actually cached:"
-          no_files_are_cached: "There are actually no file in cache."
-          delete: "Completely wipe cache?"
-          confirm: 'Are you sure you want to completely clear cache?'
-          cache_wiped: "Cache was wiped!"
-        how_to_enable:
-          warning: "You can't manage cache!"
-          explanations: "There are certain settings that are not set correctly to be able to use Monologue's basic cache. Please review configuration documentation."
       sessions:
         new:
           title: "Sign in"
@@ -131,14 +120,14 @@ en:
     errors:
       models:
         full_messages: "%{message}"
-        monologue/posts_revision:
+        monologue/post:
           blank: "%{attribute} is required"
+          taken: "%{attribute} is already used by another post"
           attributes:
             published_at:
               blank: "'Published at' is required"
             url:
               start_with_slash: "URL can't start with a slash ('/')"
-              unique: "URL is already used by another post"
         monologue/user:
           blank: "%{attribute} is required"
           taken: "%{attribute} has already been taken"
